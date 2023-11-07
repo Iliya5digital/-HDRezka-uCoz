@@ -1,0 +1,142 @@
+<html lang="ru">
+<head>
+<title>[TITLE]</title>
+<link rel="stylesheet" href="[CSS_URL]" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0c1016">
+<meta property="og:image" content="/images/social.jpg"/>
+
+<link rel="preload" href="/css/common.css" as="style">
+<link rel="preload" href="/css/styles.css" as="style">
+<link rel="preload" href="/css/engine.css" as="style">
+<link rel="preload" href="/css/fontawesome.css" as="style">
+<link rel="preload" href="/webfonts/manrope-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/manrope-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fredoka-one-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fa-light-300.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="shortcut icon" href="/images/favicon.svg" />
+
+<link rel="stylesheet" href="[CSS_URL]" />
+<link href="/css/styles-support.css?v=1.5" type="text/css" rel="stylesheet" media="screen and (min-width: 1220px)">
+</head>
+
+<body>
+<script>
+function switchLight() {
+if (localStorage.getItem('theme') === 'dark') {
+document.querySelector('body').classList.add('dt-is-active');
+} else {
+document.querySelector('body').classList.remove('dt-is-active');
+};
+};
+switchLight();
+</script>
+
+<div class="wrapper">
+<div class="wrapper-container wrapper-main">
+
+<header class="header d-flex jc-space-between ai-center<?if($PAGE_ID$='main' or $PAGE_ID$='entry' or $PAGE_ID$='category')?><?else?> hbg<?endif?>">
+<!-- <header> -->
+<a href="/" class="logo header__logo">
+<div class="logo__title"><span>HD</span>REZKA<span>4K</span></div>
+<p class="logo__caption">Супер hd кинотеатр</p>
+</a>
+
+<div class="header__search">
+<form id="quicksearch" onsubmit="this.sfSbm.disabled=true" method="post" action="/load">
+<input type="hidden" name="do" value="search">
+<input type="hidden" name="subaction" value="search">
+<input type="hidden" name="a" value="2">
+<div class="header__search-box">
+<input id="ajax_search" name="query" placeholder="Поиск по сайту..." type="text" autocomplete="off">
+<button name="sfSbm" type="submit" class="search-btn"><span class="fal fa-search"></span></button>
+</div>
+</form>
+</div>
+
+<div class="soc-channels d-flex jc-flex-end flex-grow-1">
+<a href="#" target="_blank" class="soc-channels__item tlg"></a>
+<a href="#" target="_blank" class="soc-channels__item vk"></a>
+<a href="#" target="_blank" class="soc-channels__item yt"></a>
+</div>
+
+<ul class="theme-toggle" title="Сменить цвет дизайна">
+<li><span class="fal fa-moon"></span></li>
+<li><span class="fal fa-sun"></span></li>
+</ul>
+
+<?if($USER_LOGGED_IN$)?>
+<div class="header__btn btn js-show-login"><span class="fal fa-cog"></span><span>Кабинет</span></div>
+<?else?>
+<div class="header__btn btn js-show-login"><span class="fal fa-lock"></span><span>Войти</span></div>
+<?endif?>
+
+<div class="header__btn-menu d-none js-show-mobile-menu"><span class="fal fa-bars"></span></div>
+<!-- </header> -->
+</header> <!-- END HEADER -->
+
+<div class="content flex-grow-1 cols d-flex">
+<aside class="col-side">
+<!-- <container> --><!-- <block> -->
+<div class="side-block">
+<div class="side-block__title">TITLE</div>
+<div class="side-block__content d-grid-mob">CONTENT</div>
+</div>
+<!-- </block> --><!-- </container> -->
+</aside>
+
+<main class="col-main flex-grow-1">
+<div class="page-padding">
+<div id="dle-content">
+[BODY]
+</div>
+</div>
+</main> <!-- END COL MAIN -->
+</div>
+
+<footer class="footer d-flex ai-center">
+<!-- <footer> -->
+<div class="footer__text flex-grow-1">
+© 2023 "$SITE_NAME$" Смотрите новые сериалы и фильмы онлайн.
+<br>Все права защищены, берегитесь пиратов.
+</div>
+
+<a href="/index/0-3" class="footer__btn btn">Правообладателям</a>
+<div class="footer__counter pand_foot">$POWERED_BY$</div>
+<!-- </footer> -->
+</footer> <!-- END FOOTER -->
+</div> <!-- END WRAPPER-MAIN -->
+</div> <!-- END WRAPPER -->	
+
+<?if($USER_LOGGED_IN$)?>
+<div class="login login--logged d-none">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__avatar img-box"><img src="<?if($USER_AVATAR_URL$)?>$USER_AVATAR_URL$<?else?>/dleimages/noavatar.png<?endif?>" title="$USERNAME$" alt="$USERNAME$" /></div>
+<div class="login__title stretch-free-width ws-nowrap">$USERNAME$ <?if($USER_GROUP$='Администраторы')?><a href="/panel/" target="_blank">Админка</a><?endif?></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+
+<ul class="login__content login__menu d-flex jc-space-between">
+<?if($ADD_ENTRY_LINK$)?><li><a href="$ADD_ENTRY_LINK$"><span class="fal fa-plus"></span>Добавить пост</a></li><?endif?>
+<li><a href="$PERSONAL_PAGE_LINK$"><span class="fal fa-user"></span>Мой профиль</a></li>
+<li><a href="$PM_URL$"><span class="fal fa-envelope"></span>Сообщения: ($IS_NEW_PM$)</a></li>
+<li><a href="/index/11"><span class="fal fa-cog"></span>Настройки</a></li>
+<li><a href="/index/34-$USER_ID$"><span class="fal fa-comments"></span>Мои комментарии</a></li>
+<li><a href="$LOGOUT_LINK$"><span class="fal fa-sign-out"></span>Выйти</a></li>
+</ul>
+</div>
+<?else?>
+$LOGIN_FORM$
+<?endif?>
+<!-- <popup> -->
+<div style="border:1px solid black;padding:3px;">
+<div align="center"><b>[TITLE]</b></div>
+[BODY]
+</div>
+<!-- </popup> -->
+<script src="/js/libs.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<div class="side-block js-this-in-mobile-menu">
+<ul class="side-block__content side-block__menu">
+<li><a href="/load/1">Все жанры</a><span class="fal fa-camera-movie"></span>
+<ul class="side-block__menu-hidden anim">
+<li><a href="/load/2">Аниме</a></li>
+<li><a href="/load/3">Биография</a></li>
+<li><a href="/load/4">Боевики</a></li>
+<li><a href="/load/5">Вестерны</a></li>
+<li><a href="/load/6">Военные</a></li>
+<li><a href="/load/7">Детективы</a></li>
+<li><a href="/load/8">Драмы</a></li>
+<li><a href="/load/9">Исторические</a></li>
+<li><a href="/load/10">Комедии</a></li>
+<li><a href="/load/11">Криминал</a></li>
+<li><a href="/load/12">Мелодрамы</a></li>
+<li><a href="/load/13">Мюзиклы</a></li>
+<li><a href="/load/14">Приключения</a></li>
+<li><a href="/load/15">Семейный</a></li>
+<li><a href="/load/16">Спорт</a></li>
+<li><a href="/load/17">Триллеры</a></li>
+<li><a href="/load/18">Ужасы</a></li>
+<li><a href="/load/19">Фантастика</a></li>
+<li><a href="/load/20">Фэнтези</a></li>
+</ul>
+</li>
+
+<li><a href="/load/21">Новинки</a><span class="fal fa-ticket-alt"></span></li>
+<li><a href="/load/22">ТВ шоу</a><span class="fal fa-tv"></span></li>
+<li><a href="/load/23">Сериалы</a><span class="fal fa-popcorn"></span></li>
+<li><a href="/load/24">Мультфильмы</a><span class="fal fa-smile-beam"></span></li>
+<li><a href="/load/25">Аниме</a><span class="fal fa-unicorn"></span></li>
+<li><a href="/load/26">Чарт сайта</a><span class="fal fa-trophy"></span></li>
+<li><a href="/load/27">Документальное</a><span class="fal fa-film-alt"></span></li>
+<li><a href="/load/28">Короткометражки</a><span class="fal fa-camera"></span></li>
+</ul>
+</div>
+
+<div class="side-block">
+<div class="side-block__title">Ожидаем на сайте</div>
+<div class="side-block__content d-grid-mob">$MYINF_2$</div>
+</div>
+
+<div class="side-block">
+<div class="side-block__title">Комментируют</div>
+<div class="side-block__content d-grid-mob">$MYINF_3$</div>
+</div>

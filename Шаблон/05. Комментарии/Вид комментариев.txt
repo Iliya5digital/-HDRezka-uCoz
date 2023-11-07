@@ -1,0 +1,34 @@
+<div class="comment-item js-comm">
+<div class="comment-item__header d-flex ai-center <?if($GID$='4')?>comment-item__header--admin<?endif?>">
+<div class="comment-item__img img-fit-cover js-comm-avatar"><img src="<?if($AVATAR_URL$)?>$AVATAR_URL$<?else?>/dleimages/noavatar.png<?endif?>" alt="<?if($USERNAME$)?>$USERNAME$<?else?>$NAME$<?endif?>"></div>
+<div class="comment-item__meta flex-grow-1">
+<div class="comment-item__author ws-nowrap"><?if($USERNAME$)?><a href="$PROFILE_URL$" target="_blank">$USERNAME$</a><?else?>$NAME$<?endif?></div>
+<div class="comment-item__date ws-nowrap">$DATE$, $TIME$</div>
+</div>
+
+<div class="comment-item__rating ws-nowrap">
+<?if($GOOD_COMMENT_URL$)?><a href="$GOOD_COMMENT_URL$"><span class="fal fa-plus-circle"></span></a><?else?><a href="javascript://" title="Вы не можете оценить комментарий."><span class="fal fa-plus-circle"></span></a><?endif?>
+<?if($COMMENT_RATING$<0)?> 
+<span class="myWinError count"><b>$COMMENT_RATING$</b></span> 
+<?else?> 
+<?if($COMMENT_RATING$=0)?> 
+<span style="color:gray;" class="count"><b>$COMMENT_RATING$</b></span> 
+<?else?> 
+<span class="myWinSuccess count"><b>+$COMMENT_RATING$</b></span> 
+<?endif?> 
+<?endif?>
+<?if($BAD_COMMENT_URL$)?><a href="$BAD_COMMENT_URL$"><span class="fal fa-minus-circle"></span></a><?else?><a href="javascript://" title="Вы не можете оценить комментарий."><span class="fal fa-minus-circle"></span></a><?endif?>
+</div>
+
+</div>
+
+<?if($MODER_PANEL$)?><div style="float: right;">$MODER_PANEL$</div><?endif?>
+<div class="comment-item__main full-text clearfix">$MESSAGE$</div>
+
+<?if($ANSWER_URL$)?>
+<div class="comment-item__footer d-flex ai-center">
+<div class="comment-item__reply"><a href="$ANSWER_URL$">Ответить<span class="fal fa-angle-down"></span></a></div>
+</div>
+<?endif?>
+
+</div>

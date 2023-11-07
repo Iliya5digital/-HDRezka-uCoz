@@ -1,0 +1,51 @@
+<div class="<?if($PAGE_ID$="login")?><?else?>login login--not-logged d-none<?endif?>">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__title stretch-free-width ws-nowrap">Войти <a href="$REGISTER_LINK$">Регистрация</a></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+
+<div class="login__content">
+<div class="login__row">
+<div class="login__caption">Логин:</div>
+<div class="login__input"><input type="text" name="user" id="login_name" placeholder="Ваш логин"/></div>
+<span class="fal fa-user"></span>
+</div>
+
+<div class="login__row">
+<div class="login__caption">Пароль: <a href="$REMINDER_LINK$">Забыли пароль?</a></div>
+<div class="login__input"><input type="password" name="password" id="login_password" placeholder="Ваш пароль" /></div>
+<span class="fal fa-lock"></span>
+</div>
+
+<label class="login__row checkbox" for="rem$PAGE_ID$">
+<input id="rem$PAGE_ID$" type="checkbox" name="rem" value="1" checked="checked"/>
+<span>Запомнить меня</span>
+</label>
+
+<div class="login__row">
+<button name="sfSbm" type="submit" title="Вход">Войти на сайт</button>
+</div>
+</div>
+
+<div class="login__social">
+<div class="login__social-caption">Или войти через</div>
+<div class="login__social-btns">
+<a href="javascript://" onclick="return uSocialLogin('vkontakte');" target="_blank"><img src="/images/social/vk.png" alt="" /></a>
+<a href="javascript://" onclick="return uSocialLogin('ok');" target="_blank"><img src="/images/social/ok.png" alt="" /></a>
+<a href="javascript://" onclick="return uSocialLogin('facebook');" target="_blank"><img src="/images/social/fb.png" alt="" /></a>
+<a href="javascript://" onclick="return uSocialLogin('twitter');" target="_blank"><img src="/images/social/twitter.jpg" alt="" /></a>
+<a href="javascript://" onclick="return uSocialLogin('google');" target="_blank"><img src="/images/social/google.png" alt="" /></a>
+<a href="javascript://" onclick="return uSocialLogin('yandex');" target="_blank"><img src="/images/social/yandex.png" alt="" /></a>
+</div>
+</div>
+
+</div>
+
+<style>
+#uidLogForm form {padding: 20px;}
+#uidLogButton {display: none;}
+#baseLogForm {display: block!important;}
+#uidLogButtonAjx {display: none;}
+#baseLogFormAjx {display: block!important;}
+.login {text-align: left;}
+</style>

@@ -1,0 +1,35 @@
+<a href="/" class="logo header__logo">
+<div class="logo__title"><span>HD</span>REZKA<span>4K</span></div>
+<p class="logo__caption">Супер hd кинотеатр</p>
+</a>
+
+<div class="header__search">
+<form id="quicksearch" onsubmit="this.sfSbm.disabled=true" method="post" action="/load">
+<input type="hidden" name="do" value="search">
+<input type="hidden" name="subaction" value="search">
+<input type="hidden" name="a" value="2">
+<div class="header__search-box">
+<input id="ajax_search" name="query" placeholder="Поиск по сайту..." type="text" autocomplete="off">
+<button name="sfSbm" type="submit" class="search-btn"><span class="fal fa-search"></span></button>
+</div>
+</form>
+</div>
+
+<div class="soc-channels d-flex jc-flex-end flex-grow-1">
+<a href="#" target="_blank" class="soc-channels__item tlg"></a>
+<a href="#" target="_blank" class="soc-channels__item vk"></a>
+<a href="#" target="_blank" class="soc-channels__item yt"></a>
+</div>
+
+<ul class="theme-toggle" title="Сменить цвет дизайна">
+<li><span class="fal fa-moon"></span></li>
+<li><span class="fal fa-sun"></span></li>
+</ul>
+
+<?if($USER_LOGGED_IN$)?>
+<div class="header__btn btn js-show-login"><span class="fal fa-cog"></span><span>Кабинет</span></div>
+<?else?>
+<div class="header__btn btn js-show-login"><span class="fal fa-lock"></span><span>Войти</span></div>
+<?endif?>
+
+<div class="header__btn-menu d-none js-show-mobile-menu"><span class="fal fa-bars"></span></div>

@@ -1,0 +1,182 @@
+<div class="form article">
+<div class="form__header">
+<h1 class="form__title">Регистрация</h1>
+<a href="/" class="form__btn icon-at-left"><span class="far fa-home"></span>На главную</a>
+</div>
+
+<?if($PAGE_ID$ == 'register')?>
+<div class="text message-info"> 
+<b>Здравствуйте, уважаемый посетитель нашего сайта!</b><br />
+Регистрация на нашем сайте позволит Вам быть его полноценным участником.
+Вы сможете добавлять новости на сайт, оставлять свои комментарии, просматривать скрытый текст и многое другое.
+В случае возникновения проблем с регистрацией, обратитесь к <a href="/index/0-3">администратору</a> сайта.
+</div>
+
+<div class="uf-reg-wrap">
+ <h2 style="display: none;">Регистрация</h2>
+ <form id="uf-register" method="post" autocomplete="off" action="">
+ <?if($SOCIAL_LOGIN$ && ($ONLY1STEP$ || $STEP$==1))?>
+ <div class="uf-soc-icons" style="display: none;">
+ <p class="uf-soc-openselect">Через социальную сеть</p>
+ <p class="uf-soc-closeselect">Выберите социальную сеть...</p>
+ <ul>
+ <?if($LOGIN_UID$)?><li>$LOGIN_UID$</li><?endif?>
+ <?if($LOGIN_FB$)?><li>$LOGIN_FB$</li><?endif?>
+ <?if($LOGIN_VK$)?><li>$LOGIN_VK$</li><?endif?>
+ <?if($LOGIN_GOOGLE$)?><li>$LOGIN_GOOGLE$</li><?endif?>
+ <?if($LOGIN_OK$)?><li>$LOGIN_OK$</li><?endif?>
+ <?if($LOGIN_YANDEX$)?><li>$LOGIN_YANDEX$</li><?endif?>
+ <?if($LOGIN_TWITTER$)?><li>$LOGIN_TWITTER$</li><?endif?>
+ </ul>
+ <div class="clear"></div>
+ </div>
+ <?endif?>
+
+<div class="uf-fields-wrap">
+<?if($SOCIAL_LOGIN$ && ($ONLY1STEP$ || $STEP$==1))?><p style="display: none;">или через форму на сайте</p><?endif?>
+<?if($EMAIL$)?>
+<div class="form__row uf-field">
+<div class="form__caption">Email</div>
+<div class="form__content">$EMAIL$ <span class="uf-status-icon text-field" id="uf-email-status-icon"><span class="uf-status"><i></i><p id="uf-email-status"></p></span></span></div>
+</div>
+<?endif?>
+
+<?if($PASSWORD$)?>
+<div class="form__row uf-field">
+<div class="form__caption">Пароль</div>
+<div class="form__content">$PASSWORD$ <span class="uf-status-icon text-field" id="uf-password-status-icon"><span class="uf-status"><i></i><p id="uf-password-status"></p></span></span>
+<input type="checkbox" id="uf-show-pass" onchange="document.getElementById('uf-password').type = this.checked ? 'text' : 'password'">
+<label for="uf-show-pass"><span id="uf-show-pass-icon"></span></label></div>
+</div>
+<?endif?>
+
+<?if($NAME$)?>
+<div class="form__row uf-field">
+<div class="form__caption">Имя</div>
+<div class="form__content">$NAME$ <span class="uf-status-icon text-field" id="uf-name-status-icon"></span></div>
+</div>
+<?endif?>
+
+<?if($SURNAME$)?>
+<div class="form__row uf-field">
+<div class="form__caption">Фамилия</div>
+<div class="form__content">$SURNAME$ <span class="uf-status-icon text-field" id="uf-surname-status-icon"></span></div>
+</div>
+<?endif?>
+
+<?if($NICK$)?>
+<div class="form__row uf-field">
+<div class="form__caption">Никнейм</div>
+<div class="form__content">$NICK$ <span class="uf-status-icon text-field" id="uf-nick-status-icon"><span class="uf-status"><i></i><p id="uf-nick-status"></p></span></span></div>
+</div>
+<?endif?>
+
+<?if($BIRTHDAY$)?>
+<div class="form__row uf-field">
+<div class="form__caption">Дата рождения</div>
+<div class="form__content">$BIRTHDAY$ <span class="uf-status-icon" id="uf-birthday-status-icon"></span></div>
+</div>
+<?endif?>
+
+<?if($GENDER$)?>
+<div class="form__row uf-field">
+<div class="form__caption">Пол</div>
+<div class="form__content">$GENDER$ <span class="uf-status-icon" id="uf-gender-status-icon"></span></div>
+</div>
+<?endif?>
+
+<?if($LOCATION$)?>
+<div class="form__row uf-field">
+<div class="form__caption">Место проживания</div>
+<div class="form__content">$LOCATION$ <span class="uf-status-icon text-field" id="uf-location-status-icon"></span></div>
+</div>
+<?endif?>
+
+<?if($CAPTCHA$)?>
+<div class="form__row form__row--protect">
+<div class="form__caption"><label class="form__label form__label--important" for="">Защита от спама</label></div>
+<div class="form__content form__content--sec-code">$CAPTCHA$ <span class="uf-status-icon" id="uf-captcha-status-icon"><span class="uf-status"><i></i><p id="uf-captcha-status"></p></span></span></div>
+</div>
+<?endif?>
+
+<?if($POLICY$)?><div class="form__content checkbox policy">$POLICY$</div><?endif?>
+<?if($AGREEMENT$)?><br><div class="form__content checkbox agreement">$AGREEMENT$</div><?endif?>
+<?if($TERMS$)?><div class="form__content checkbox uf-field">
+$TERMS$
+<span class="uf-status-icon" id="uf-terms-status-icon"></span>
+</div><?endif?>
+
+<div id="uf-form-status"></div>
+ 
+<div class="form__row form__row--without-label">$SUBMIT$</div>
+</div>
+</form>
+<div style="clear:both"></div>
+</div>
+
+<style type="text/css">
+.uf-fields-wrap input[type="text"], input[type="password"] {max-width: 98%;}
+.uf-fields-wrap select { display: initial; }
+#uf-register input#uf-show-pass[type="checkbox"]{ display:none }
+#uf-register input#uf-show-pass[type="checkbox"] + label span { display:inline-block; width:16px; height:16px; background:url(/.s/img/icon/social/pw.svg) no-repeat center center #c6c6c6; background-size:80% 80%; vertical-align:middle; margin-left:-23px; cursor:pointer; border-radius:10px }
+#uf-register input#uf-show-pass[type="checkbox"] + label { display:inline-block }
+#uf-register input#uf-show-pass[type="checkbox"]:checked + label span { background:url(/.s/img/icon/social/pw-s.svg) no-repeat center center #c6c6c6; background-size:80% 80% }
+#uf-register .uf-changed input#uf-show-pass[type="checkbox"] + label span { margin-left:-38px;}
+#uf-register .uf-status-icon { display:none; vertical-align:middle; width:16px; height:16px; background-repeat:no-repeat; background-size:cover; position:relative }
+#uf-register .uf-status-icon.text-field { margin-left:-23px }
+#captcha-block-site-user-reg, #uf-register .uf-field>label.captcha-block { width: auto; display: inline-block}
+#uf-captcha-img { width:125px; height:35px }
+#uf-email-status a { display:block }
+#uf-email-status-icon.fail, #uf-password-status-icon.fail, #uf-captcha-status-icon.fail { cursor:pointer }
+#uf-register span.fail { display:inline-block; background-image:url(/.s/img/icon/social/fail.svg) }
+#uf-register span.pass { display:inline-block; background-image:url(/.s/img/icon/social/pass.svg) }
+#uf-register span.wait { display:inline-block; background-image:url(/.s/img/icon/ajsml.gif) }
+#uf-register span.uf-status{ display:none; position:absolute; right:-15px; margin:0; z-index:5 }
+#uf-register span.uf-status p { background-color:rgba(0,0,0,0.7); color:#fff; padding:5px 10px; white-space:nowrap; font:12px/29px 'Arial'; border-radius:3px; margin:6px 0 0 0; }
+#uf-register span.uf-status i { float:right; margin-right:18px; display:block; width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-bottom:6px solid rgba(0,0,0,0.7) }
+#uf-register .uf-refresh { cursor:pointer }
+#uf-captcha { width:80px!important }
+#uf-register .captcha img { vertical-align:middle }
+#uf-submit { margin:10px 0 10px 0; clear:both }
+#uf-submit.disabled { opacity:0.2 }
+#uf-register .uf-field label.uf-inline-label, #uf-register .uf-field label#uf-terms-label { display:inline }
+#uf-register .uf-soc-closeselect { display:none }
+.uf-soc-icons ul { list-style-type:none; margin:0; padding:0 }
+.uf-soc-icons ul li { text-align:left; float:left; width:50%; margin:2px 0 }
+#uf-register .uf-soc-icons ul li b { display:block; position:absolute; left:0; padding-left:42px; top:8px; width:60px; font-weight:normal }
+
+@media screen and (max-width:768px) {
+ .uf-reg-wrap { text-align:center }
+ a.login-with i { width:44px; height:44px; border-radius:24px;}
+ #uf-register .uf-fields-wrap, #uf-register .uf-soc-icons { float:none; width:100%;text-align:center }
+ #uf-register .uf-reg-wrap, #uf-register .uf-field label, #uf-register .uf-field { text-align:center }
+ #uf-register .uf-soc-icons ul { margin:0 auto; overflow:auto; display:inline-block }
+ #uf-register .uf-soc-icons ul li { width:auto; margin:5px }
+ #uf-register .uf-soc-icons a.login-with b { display:none }
+ #uf-register .uf-soc-closeselect { display:block }
+ #uf-register .uf-soc-openselect { display:none }
+ #uf-register .uf-field input { padding:10px 4%; font-size:120%; margin:0 auto }
+ #uf-submit { margin:0 auto }
+ #uf-register input#uf-show-pass[type="checkbox"] + label span { margin-left:-38px }
+ #uf-register .uf-changed input#uf-show-pass[type="checkbox"] + label span { margin-left:-60px;}
+}
+</style>
+$JS_VALIDATOR$
+<?endif?>
+
+<?if($PAGE_ID$ == 'verify')?>
+<div class="message-info">
+<div class="message-info__title">Отлично теперь необходимо подтвердить e-mail адрес!</div>
+<div class="message-info__content">На <b>$EMAIL$</b> было отправлено письмо с ссылкой для подтверждения регистрации.<br>Для завершения регистрации перейдите по ссылке из полученного письма.</div>
+</div>
+<?endif?>
+
+<?if($PAGE_ID$ == 'confirm')?>
+<div class="message-info">
+<div class="message-info__title">Подтверждение e-mail адреса</div>
+<div class="message-info__content"> <?if($CONFIRM_ERROR$)?>$CONFIRM_ERROR$<?else?>Поздравляем! вы успешно подтвердили e-mail адрес<?endif?></div>
+</div>
+<div class="form__row form__row--without-label"><a class="form__btn form__btn--primary" href="/">На главную</a></div>
+</div>
+<?endif?>
+</div>

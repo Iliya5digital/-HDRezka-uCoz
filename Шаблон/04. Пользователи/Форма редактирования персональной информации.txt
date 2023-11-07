@@ -1,0 +1,165 @@
+<?if($ERROR$)?>
+<div class="message-info">
+<div class="message-info__title">Ошибка!</div>
+<div class="message-info__content">$ERROR$</div>
+</div>
+<?endif?>
+
+<?if($LOGIN_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$LOGIN_SIGN$</label></div>
+<div class="form__content">$LOGIN_FL$</div>
+</div>
+<?endif?>
+
+<?if($PASSWORD_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$PASSWORD_SIGN$</label></div>
+<div class="form__content">$PASSWORD_FL$</div>
+</div>
+<?endif?>
+
+<?if($PASSWORD1_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$PASSWORD1_SIGN$</label></div>
+<div class="form__content">$PASSWORD1_FL$</div>
+</div>
+<?endif?>
+
+<?if($GROUP_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$GROUP_SIGN$</label></div>
+<div class="form__content">$GROUP_FL$</div>
+</div>
+<?endif?>
+
+<?if($NAME_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$NAME_SIGN$</label></div>
+<div class="form__content">$NAME_FL$</div>
+</div>
+<?endif?>
+
+<?if($EMAIL_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$EMAIL_SIGN$</label></div>
+<div class="form__content">$EMAIL_FL$</div>
+</div>
+<?endif?>
+
+<?if($WWW_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$WWW_SIGN$</label></div>
+<div class="form__content">$WWW_FL$</div>
+</div>
+<?endif?>
+
+<?if($ICQ_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$ICQ_SIGN$</label></div>
+<div class="form__content">$ICQ_FL$</div>
+</div>
+<?endif?>
+
+<?if($JABBER_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$JABBER_SIGN$</label></div>
+<div class="form__content">$JABBER_FL$</div>
+</div>
+<?endif?>
+
+<?if($SKYPE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$SKYPE_SIGN$</label></div>
+<div class="form__content">$SKYPE_FL$</div>
+</div>
+<?endif?>
+
+<?if($YAHOO_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$YAHOO_SIGN$</label></div>
+<div class="form__content">$YAHOO_FL$</div>
+</div>
+<?endif?>
+
+<?if($PHONE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$PHONE_SIGN$</label></div>
+<div class="form__content">$PHONE_FL$</div>
+</div>
+<?endif?>
+
+<?if($BIRTHDAY_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$BIRTHDAY_SIGN$</label></div>
+<div class="form__content">$BIRTHDAY_FL$</div>
+</div>
+<?endif?>
+
+<?if($GENDER_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$GENDER_SIGN$</label></div>
+<div class="form__content">$GENDER_FL$</div>
+</div>
+<?endif?>
+
+<?if($COUNTRY_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$COUNTRY_SIGN$</label></div>
+<div class="form__content">$COUNTRY_FL$</div>
+</div>
+<?endif?>
+
+<?if($STATE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$STATE_SIGN$</label></div>
+<div class="form__content">$STATE_FL$</div>
+</div>
+<?endif?>
+
+<?if($CITY_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$CITY_SIGN$</label></div>
+<div class="form__content">$CITY_FL$</div>
+</div>
+<?endif?>
+
+<?if($AVATAR_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$AVATAR_SIGN$</label></div>
+<div class="form__content">$AVATAR_FL$</div>
+</div>
+<?endif?>
+
+<?if($SIGNATURE_FL$)?>
+<div class="form__row">
+<div class="form__content">
+$SIGNATURE_FL$
+</div></div>
+<?endif?>
+
+<?if($SUBSCRIPTION_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label>$SUBSCRIPTION_SIGN$</label></div>
+<div class="form__content">$SUBSCRIPTION_FL$</div>
+</div>
+<?endif?>
+
+<?if($OPTIONS_FL$)?>
+<div class="form__row">
+<div class="form__check form__content">$OPTIONS_SIGN$</div>
+<div class="form__check form__content">$OPTIONS_FL$</div>
+</div>
+<style>.form__check label {display: block;}</style>
+<?endif?>
+
+<?if($SECURITY_CODE_FL$)?>
+<div class="form__row form__row--protect">
+<div class="form__caption"><label class="form__label form__label--important" for="">Защита от спама</label></div>
+<div class="form__content form__content--sec-code">$SECURITY_CODE_FL$</div>
+</div>
+<?endif?>
+
+<div class="form__row form__row--without-label">
+<button class="form__btn form__btn--primary manFlSbm" id="siF20" name="sbm" type="submit">$SUBMIT_SIGN$</button>
+</div>

@@ -1,0 +1,282 @@
+<?if($TITLE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$TITLE_SIGN$</label></div>
+<div class="form__content">$TITLE_FL$</div>
+</div>
+<?endif?>
+
+<?if($HGU_TITLE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$HGU_TITLE_SIGN$</label></div>
+<div class="form__content">$HGU_TITLE_FL$</div>
+</div>
+<?endif?>
+
+<?if($SITE_DIRECT_URL_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$SITE_DIRECT_URL_SIGN$</label></div>
+<div class="form__content">$SITE_DIRECT_URL_FL$</div>
+</div>
+<?endif?>
+
+<?if($CAT_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label">$CAT_SIGN$</label></div>
+<div class="form__content">$CAT_FL$</div>
+</div>
+<?endif?>
+
+<?if($BRIEF_FL$)?>
+<div class="form__row">
+<div class="form__caption form__caption--above"><label class="form__label form__label--important">Краткое описание фильма:</label></div>
+<div class="form__content">
+<div style="float: right; margin-top: -35px; margin-right: 10px;" class="edtTypeMenu fHelp" data-uetarget="brief">
+<span><a href="javascript:;" data-uemode="1" style="display: none;">Визуальный редактор</a><b style="display: inline;">Визуальный редактор</b></span> |
+<span><a href="javascript:;" data-uemode="3">Панель HTML кодов</a><b style="display: none;">Панель HTML кодов</b></span>
+</div>
+$BRIEF_FL$
+</div>
+</div>
+<?endif?>
+
+<?if($MESSAGE_FL$)?>
+<div class="form__row">
+<div class="form__caption form__caption--above"><label class="form__label form__label--important">Код со своим плеером:</label></div>
+<div class="form__content">
+<div style="float: right; margin-top: -35px; margin-right: 10px;" class="edtTypeMenu fHelp" data-uetarget="message">
+<span><a href="javascript:;" data-uemode="1" style="display: none;">Визуальный редактор</a><b style="display: inline;">Визуальный редактор</b></span> |
+<span><a href="javascript:;" data-uemode="3">Панель HTML кодов</a><b style="display: none;">Панель HTML кодов</b></span>
+</div>
+$MESSAGE_FL$
+</div>
+</div>
+<?endif?>
+
+<?if($IMAGES_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$IMAGES_SIGN$</label></div>
+<div class="form__content"><li style="list-style: none;">$IMAGES_FL$</li></div>
+</div>
+<?endif?>
+
+<?if($ATTACHMENTS_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$ATTACHMENTS_SIGN$</label></div>
+<div class="form__content">$ATTACHMENTS_FL$</div>
+</div>
+<?endif?>
+
+<?if($VERSION_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$VERSION_SIGN$</label></div>
+<div class="form__content">$VERSION_FL$</div>
+</div>
+<?endif?>
+
+<?if($LICENSE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$LICENSE_SIGN$</label></div>
+<div class="form__content">$LICENSE_FL$</div>
+</div>
+<?endif?>
+
+<?if($OS_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$OS_SIGN$</label></div>
+<div class="form__content">$OS_FL$</div>
+</div>
+<?endif?>
+
+<?if($LANGUAGE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$LANGUAGE_SIGN$</label></div>
+<div class="form__content">$LANGUAGE_FL$</div>
+</div>
+<?endif?>
+
+<?if($SCREEN_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$SCREEN_SIGN$</label></div>
+<div class="form__content">$SCREEN_FL$</div>
+</div>
+<?endif?>
+
+<?if($FILE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$FILE_SIGN$</label></div>
+<div class="form__content">$FILE_FL$</div>
+</div>
+<?endif?>
+
+<?if($REMOTEFILE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Оригинальное название</label></div>
+<div class="form__content">$REMOTEFILE_FL$</div>
+</div>
+<?endif?>
+
+<?if($REMOTESIZE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Продолжительность</label></div>
+<div class="form__content">$REMOTESIZE_FL$</div>
+</div>
+<?endif?>
+
+<?if($NAME_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Качество</label></div>
+<div class="form__content">$NAME_FL$</div>
+</div>
+<?endif?>
+
+<?if($EMAIL_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">ID фильма на Kinopoisk</label></div>
+<div class="form__content">$EMAIL_FL$</div>
+</div>
+<?endif?>
+
+<?if($PHONE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$PHONE_SIGN$</label></div>
+<div class="form__content">$PHONE_FL$</div>
+</div>
+<?endif?>
+
+<?if($SITE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Сезон (1-5 сезон например)</label></div>
+<div class="form__content">$SITE_FL$</div>
+</div>
+<?endif?>
+
+<?if($OTHER7_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Серия (1 из 16 например)</label></div>
+<div class="form__content">$OTHER7_FL$</div>
+</div>
+<?endif?>
+
+<?if($SOURCE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Ссылка на трейлер Youtube</label></div>
+<div class="form__content">$SOURCE_FL$</div>
+</div>
+<?endif?>
+
+<?if($DOCPAGE_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$DOCPAGE_SIGN$</label></div>
+<div class="form__content">$DOCPAGE_FL$</div>
+</div>
+<?endif?>
+
+<!-- OTHER1..5 -->
+<?if($OTHER1_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Режиссер:</label></div>
+<div class="form__content">$OTHER1_FL$</div>
+</div>
+<?endif?>
+
+<?if($OTHER2_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Сценарист:</label></div>
+<div class="form__content">$OTHER2_FL$</div>
+</div>
+<?endif?>
+
+<?if($OTHER3_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Актеры:</label></div>
+<div class="form__content">$OTHER3_FL$</div>
+</div>
+<?endif?>
+
+<?if($OTHER4_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Дата выхода:</label></div>
+<div class="form__content">$OTHER4_FL$</div>
+</div>
+<?endif?>
+
+<?if($OTHER5_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Перевод:</label></div>
+<div class="form__content">$OTHER5_FL$</div>
+</div>
+<?endif?>
+<!-- /OTHER1..5 -->
+
+<!-- FREE EXTRAFIELDS -->
+<?if($OTHER6_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">Прямая ссылка на плеер (если есть)</label></div>
+<div class="form__content">$OTHER6_FL$</div>
+</div>
+<?endif?>
+
+<?if($OTHER8_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$OTHER8_SIGN$</label></div>
+<div class="form__content">$OTHER8_FL$</div>
+</div>
+<?endif?>
+<!-- /FREE EXTRAFIELDS -->
+
+<?if($FILTER1_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$FILTER1_SIGN$</label></div>
+<div class="form__content">$FILTER1_FL$</div>
+</div>
+<?endif?>
+
+<?if($FILTER2_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$FILTER2_SIGN$</label></div>
+<div class="form__content">$FILTER2_FL$</div>
+</div>
+<?endif?>
+
+<?if($FILTER3_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$FILTER3_SIGN$</label></div>
+<div class="form__content">$FILTER3_FL$</div>
+</div>
+<?endif?>
+
+<?if($TAGS_FL$)?>
+<div class="form__row">
+<div class="form__caption"><label class="form__label" for="title">$TAGS_SIGN$</label></div>
+<div class="form__content">$TAGS_FL$</div>
+</div>
+<?endif?>
+
+<div class="form__row form__row--without-label">
+<div class="form__content">
+<table class="form__table">
+<?if($ORDERING_FL$)?><tr><td>$ORDERING_SIGN$</td><td>$ORDERING_FL$</td></tr><?endif?>
+<?if($ADD_TIME_FL$)?><tr><td>$ADD_TIME_SIGN$</td><td>$ADD_TIME_FL$</td></tr><?endif?>
+<?if($PLACED_FL$)?><tr><td>$PLACED_SIGN$</td><td>$PLACED_FL$</td></tr><?endif?>
+<?if($WHO_ADDED_FL$)?><tr><td>$WHO_ADDED_SIGN$</td><td>$WHO_ADDED_FL$</td></tr><?endif?>
+<?if($TOPPERIOD_FL$)?><tr><td>$TOPPERIOD_SIGN$</td><td>$TOPPERIOD_FL$</td></tr><?endif?>
+<?if($COM_NOTICE_FL$)?><tr><td>$COM_NOTICE_SIGN$</td><td>$COM_NOTICE_FL$</td></tr><?endif?>
+<?if($MODER_OPT_FL$)?><tr><td>$MODER_OPT_SIGN$</td><td>$MODER_OPT_FL$</td></tr><?endif?>
+<?if($META_FIELDS$)?>$META_FIELDS$<?endif?>
+<?if($CROSSPOST_FORM$)?>$CROSSPOST_FORM$<?endif?>
+</table>
+</div>
+</div>
+
+<?if($SECURE_FL$)?>
+<div class="form__row form__row--protect">
+<div class="form__caption"><label class="form__label form__label--important" for="">Защита от спама</label></div>
+<div class="form__content form__content--sec-code">$SECURE_FL$</div>
+</div>
+<?endif?>
+
+<div class="form__row form__row--without-label">
+$SUBMIT_FL$
+$CANCEL_FL$
+<style>.manFlRst {margin-left: 20px;}</style>
+</div>

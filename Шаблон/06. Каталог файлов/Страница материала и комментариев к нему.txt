@@ -1,0 +1,246 @@
+<html lang="ru">
+<head>
+<title>$ENTRY_TITLE$ - $CAT_NAME$ <?if($SECTION_NAME$)?>- $SECTION_NAME$<?endif?> - $MODULE_NAME$ - $SITE_NAME$</title>
+<link type="text/css" rel="stylesheet" href="/_st/my.css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0c1016">
+<meta property="og:image" content="/images/social.jpg"/>
+
+<link rel="preload" href="/css/common.css" as="style">
+<link rel="preload" href="/css/styles.css" as="style">
+<link rel="preload" href="/css/engine.css" as="style">
+<link rel="preload" href="/css/fontawesome.css" as="style">
+<link rel="preload" href="/webfonts/manrope-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/manrope-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fredoka-one-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/fa-light-300.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="shortcut icon" href="/images/favicon.svg" />
+
+<link rel="stylesheet" href="/_st/my.css" />
+<link href="/css/styles-support.css?v=1.5" type="text/css" rel="stylesheet" media="screen and (min-width: 1220px)">
+</head>
+
+<body id="pmovie">
+<script>
+function switchLight() {
+if (localStorage.getItem('theme') === 'dark') {
+document.querySelector('body').classList.add('dt-is-active');
+} else {
+document.querySelector('body').classList.remove('dt-is-active');
+};
+};
+switchLight();
+</script>
+
+<div class="wrapper">
+<div class="wrapper-container wrapper-main">
+
+<header class="header d-flex jc-space-between ai-center<?if($PAGE_ID$='main' or $PAGE_ID$='entry' or $PAGE_ID$='category')?><?else?> hbg<?endif?>">
+$GLOBAL_AHEADER$
+</header> <!-- END HEADER -->
+
+<div class="content flex-grow-1 cols d-flex">
+<aside class="col-side">
+$GLOBAL_CLEFTER$
+</aside>
+
+<main class="col-main flex-grow-1">
+<div class="page-padding">
+<div id="dle-content">
+<!-- <body> -->
+<article class="page ignore-select pmovie">
+<div class="page__subcols js-bg-poster" data-imgbg="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>">
+<header class="page__subcol-header">
+<h1>$ENTRY_TITLE$</h1>
+<?if($RFILE_URL$)?><div class="pmovie__original-title">$RFILE_DIRECT_URL$</div><?endif?>
+ 
+<div class="pmovie__ratings d-flex ai-center">
+<div class="poster__rating"><div class="js-count-rating d-none"><?($RATING$*$RATED$-$RATED$-$RATED$)?>0</div></div>
+<div class="pmovie__ratings-score pi-center">$RATED$</div>
+<div class="pmovie__ratings-votes">($RATED$ голос<?if($RATED$%10!=1||$RATED$%100=11)?>с<?if($RATED$%10>=2&&$RATED$%10<=4&&($RATED$%100<10||$RATED$%100>=20))?>а<?else?>ов<?endif?><?endif?>)</div>
+</div>
+</header>
+
+<header class="page__subcol-meta">
+<div class="pmovie__year"><?if($FILTER1_VALUE$)?>$FILTER1_VALUE$,<?endif?> <?if($FILTER2_VALUE$)?>$FILTER2_VALUE$,<?endif?> <?if($RFILE_SIZE$)?>$RFILE_SIZE$<?endif?></div>
+<?if($AUTHOR_NAME$)?><div class="pmovie__quality d-flex ai-center">Качество:<div>$AUTHOR_NAME$</div></div><?endif?>
+
+<div class="pmovie__ext-ratings d-flex ai-center">
+<div class="pmovie__ext-rating pmovie__ext-rating--imdb" id="imdb-page-rating">0</div>
+<div class="pmovie__ext-rating pmovie__ext-rating--kp" id="kp-page-rating">0</div>
+</div>
+</header>
+
+<div class="page__subcol-side">
+<div class="pmovie__poster img-fit-cover">
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$ENTRY_TITLE$">
+<?if($SID$='1')?><div class="poster__label blue anim"><span>Фильм</span><div class="fal fa-camera-movie"></div></div><?endif?>
+<?if($CID$='23')?><div class="poster__label red anim"><span>Сериал</span><div class="fal fa-popcorn"></div></div><?endif?>
+<?if($CID$='2' or $CID$='25')?><div class="poster__label gray anim"><span>Аниме</span><div class="fal fa-unicorn"></div></div><?endif?>
+<?if($CID$='24')?><div class="poster__label green anim"><span>Мультфильм</span><div class="fal fa-smile-beam"></div></div><?endif?>
+<?if($AUTHOR_SITE$)?><div class="poster__series">$AUTHOR_SITE$</div><?endif?>
+</div>
+</div>
+
+<div class="page__subcol-ctrl">
+<div class="bslide__btns d-flex icon-at-right">
+<?if($MESSAGE$)?><button class="bslide__btn-watch js-scroll-to">Смотреть онлайн</button><?endif?>
+<?if($SOURCE_URL$)?><button class="bslide__btn-trailer js-show-trailer" data-trl="$SOURCE_URL$"><div class="fal fa-play pi-center"></div> трейлер</button><?endif?>
+</div>
+</div>
+
+<ul class="page__subcol-info pmovie__header-list">
+<?if($OTHER1$)?><li><span>Режиссер:</span> $OTHER1$</li><?endif?>
+<li><span>Жанр:</span>$ENTRY_CATS$</li>
+<?if($OTHER2$)?><li><span>Сценарист:</span> $OTHER2$</li><?endif?>
+<?if($OTHER3$)?><li><span>Актеры:</span> $OTHER3$</li><?endif?>
+<?if($OTHER4$)?><li><span>Дата выхода:</span>$OTHER4$</li><?endif?>
+<?if($OTHER5$)?><li><span>Перевод:</span> $OTHER5$</li><?endif?>
+</ul>
+
+<h2 class="page__subtitle"><?if($MODER_PANEL$)?><span style="float: right; padding: 5px;">$MODER_PANEL$</span><?endif?> Про что фильм "$ENTRY_TITLE$"</h2>
+<div class="page__text full-text clearfix">$BRIEF$
+<?if($FILE_URL$)?>
+<br><br><a href="$FILE_URL$" class="fdl-btn fx-row quote">
+<div class="fdl-btn-icon fx-col fx-center"><span class="fa fa-cloud-download"></span></div>
+<div class="fdl-btn-title fx-1 fx-col fx-center"><div>Скачать торрент</div><div>(Скачали $LOADS$)</div></div>
+<div class="fdl-btn-size fx-col fx-center">$FILE_SIZE$</div>
+</a>
+<?endif?>
+</div>
+</div>
+
+<h2 class="page__subtitle tac">Смотреть онлайн "$ENTRY_TITLE$" бесплатно</h2>
+ 
+<div class="pmovie__player tabs-block">
+<div class="pmovie__player-controls d-flex ai-center">
+<div class="tabs-block__select d-flex flex-grow-1">
+<?if($MESSAGE$)?><span>Смотреть онлайн</span><?endif?>
+<?if($OTHER6$)?><span>Запасной плеер</span><?endif?>
+<?if($AUTHOR_EMAIL$)?><span>Запасной 2 плеер</span><?endif?>
+</div>
+</div>
+
+<?if($MESSAGE$)?><div class="tabs-block__content d-none video-inside video-responsive">$MESSAGE$</div><?endif?>
+<?if($OTHER6$)?><div class="tabs-block__content d-none video-inside video-responsive"><iframe data-src="$OTHER6$" frameborder="0" allowfullscreen></iframe></div><?endif?>
+<?if($AUTHOR_EMAIL$)?><div class="tabs-block__content d-none video-inside video-responsive" id="yohoho" data-kinopoisk="$AUTHOR_EMAIL$"></div>
+<script src="//yohoho.cc/yo.js"></script>
+<?endif?>
+<div class="pmovie__player-bottom d-flex ai-center">
+<div class="pmovie__share d-flex ai-center flex-grow-1">
+<div class="pmovie__share-caption">Расскажи друзьям о своих впечатлениях:</div>
+<div class="ya-share2 not-loaded" data-services="vkontakte,facebook,odnoklassniki,viber,whatsapp,telegram" data-counter="ig"></div>
+</div>
+</div>
+
+<div class="pmovie__player-bottom-2 d-flex ai-center">
+
+<div class="pmovie__ratings d-flex ai-center flex-grow-1">
+<div class="poster__rating"><div class="js-count-rating d-none"><?($RATING$*$RATED$-$RATED$-$RATED$)?>0</div></div>
+<div class="pmovie__ratings-score pi-center">$RATED$</div>
+</div>
+
+<div class="pmovie__ratings-caption">Оцени фильм:</div>
+<div class="pmovie__rating-likes d-flex">
+<a href="#" onclick="getRate(1,$ID$,'load');return false"><span class="fal fa-thumbs-up"></span><span id="plus_$ID$" class="ignore-select"></span><?if($RATED$)?><?else?>0<?endif?></span></a>
+<a href="#" onclick="getRate(-1,$ID$,'load');return false"><span class="fal fa-thumbs-down"></span><span id="minus_$ID$" class="ignore-select"></span><?if($RATED$)?><?else?>0<?endif?></span></a>
+</div>
+<script src="/js/getRate2.js"></script>
+<script type="text/javascript">setRating($RATING$,$RATED$,$ID$)</script> 
+</div>
+</div>
+
+<section class="sect pmovie__related">
+<h2 class="sect__title sect__header">Смотреть ещё фильмы:</h2>
+<div class="sect__content d-grid">$MYINF_6$</div>
+</section>
+
+<?if($COM_IS_ACTIVE$)?>
+<div class="page__comments">
+<div class="page__comments-title">Твой отзыв на онлайн фильм</div>
+<div class="page__comments-info"><span class="fal fa-exclamation-circle"></span> Минимальная длина комментария - 50 знаков. комментарии модерируются</div>
+<?if($COM_CAN_ADD$)?>
+$COM_ADD_FORM$
+<?else?>
+<?if($USER_LOGGED_IN$)?>
+<?else?>
+<div class="message-info">
+<div class="message-info__title">Внимание!</div>
+<div class="message-info__content">Добавлять комментарии могут только зарегистрированные пользователи. <a href="javascript://" class="js-show-login">Авторизуйтесь</a> на сайте под своим логином или через соц. сети, либо пройдите короткий процесс <a href="$REGISTER_LINK$">регистрции</a>.</div>
+</div>
+<?endif?>
+<?endif?>
+<div class="page__comments-list <?if($COM_NUM_ENTRIES$='0')?>page__comments-list--not-comments<?endif?>" id="page__comments-list">
+<?if($COM_NUM_ENTRIES$='0')?><div class="message-info">Комментариев еще нет. Вы можете стать первым!</div><?endif?>
+<?if($COM_CAN_READ$)?>$COM_BODY$<?endif?>
+<?if($COM_PAGE_SELECTOR$)?>
+<div class="pagination__pages pagination__pages--full d-flex jc-center">$COM_PAGE_SELECTOR$</div>
+<?endif?>
+</div>
+</div>
+<?endif?>
+</article>
+<!-- </body> -->
+<div class="speedbar ws-nowrap">
+<a href="$HOME_PAGE_LINK$">$SITE_NAME$</a> » 
+<?if($SECTION_NAME$)?><a href="$SECTION_URL$">$SECTION_NAME$</a> » <?endif?>
+<?if($CAT_NAME$)?><a href="$CAT_URL$">$CAT_NAME$</a> » <?endif?>
+$ENTRY_TITLE$
+</div>
+</div>
+</div>
+</main> <!-- END COL MAIN -->
+</div>
+
+<footer class="footer d-flex ai-center">
+$GLOBAL_BFOOTER$
+</footer> <!-- END FOOTER -->
+</div> <!-- END WRAPPER-MAIN -->
+</div> <!-- END WRAPPER --> 
+
+<?if($USER_LOGGED_IN$)?>
+<div class="login login--logged d-none">
+<div class="login__header d-flex jc-space-between ai-center">
+<div class="login__avatar img-box"><img src="<?if($USER_AVATAR_URL$)?>$USER_AVATAR_URL$<?else?>/dleimages/noavatar.png<?endif?>" title="$USERNAME$" alt="$USERNAME$" /></div>
+<div class="login__title stretch-free-width ws-nowrap">$USERNAME$ <?if($USER_GROUP$='Администраторы')?><a href="/panel/" target="_blank">Админка</a><?endif?></div>
+<div class="login__close"><span class="fal fa-times"></span></div>
+</div>
+
+<ul class="login__content login__menu d-flex jc-space-between">
+<?if($ADD_ENTRY_LINK$)?><li><a href="$ADD_ENTRY_LINK$"><span class="fal fa-plus"></span>Добавить пост</a></li><?endif?>
+<li><a href="$PERSONAL_PAGE_LINK$"><span class="fal fa-user"></span>Мой профиль</a></li>
+<li><a href="$PM_URL$"><span class="fal fa-envelope"></span>Сообщения: ($IS_NEW_PM$)</a></li>
+<li><a href="/index/11"><span class="fal fa-cog"></span>Настройки</a></li>
+<li><a href="/index/34-$USER_ID$"><span class="fal fa-comments"></span>Мои комментарии</a></li>
+<li><a href="$LOGOUT_LINK$"><span class="fal fa-sign-out"></span>Выйти</a></li>
+</ul>
+</div>
+<?else?>
+$LOGIN_FORM$
+<?endif?>
+<script src="/js/jqueryui3.js?v=n2fbq" defer></script>
+<script src="/js/libs.js"></script>
+<?if($AUTHOR_EMAIL$)?>
+<script>
+var KP_SITE_ID = $AUTHOR_EMAIL$;
+var getFilmRatingDataPAGE = function getFilmRatingDataPAGE(element, idt, callback) {
+var id = element ? element.data('filmid') : idt;
+$.ajax({ method: 'GET', url: 'https://api.allorigins.win/raw?url=https://rating.kinopoisk.ru/' + id + '.xml', success: function success(data) { callback(element, data); }, error: function error() {
+$.ajax({ url: 'http://query.yahooapis.com/v1/public/yql', jsonp: "callback", dataType: "jsonp", data: { q: 'select * from xml where url="https://rating.kinopoisk.ru/' + id + '.xml"', format: 'xml' }, success: function success(data) {
+if (data.results[0]) { callback(element, data.results[0]); } } }); } }); };
+var renderFilmPageRatingDataPAGE = function(element, data) {
+$('#imdb_num_vote').text($(data).find('imdb_rating').attr('num_vote').replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
+$('#imdb-page-rating').text($(data).find('imdb_rating').text()).prop('title', 'Голосов: ' + $(data).find('imdb_rating').attr('num_vote').replace(/(\d)(?=(\d{3})+$)/g, '$1 ')); };
+if (KP_SITE_ID) { getFilmRatingDataPAGE(false, KP_SITE_ID, renderFilmPageRatingDataPAGE); }
+var renderFilmPageRatingDataPAGE = function(element, data) {
+$('#kp_num_vote').text($(data).find('kp_rating').attr('num_vote').replace(/(\d)(?=(\d{3})+$)/g, '$1 '));
+$('#kp-page-rating').text($(data).find('kp_rating').text()).prop('title', 'Голосов: ' + $(data).find('kp_rating').attr('num_vote').replace(/(\d)(?=(\d{3})+$)/g, '$1 ')); };
+if (KP_SITE_ID) { getFilmRatingDataPAGE(false, KP_SITE_ID, renderFilmPageRatingDataPAGE); }
+</script>
+<style>.pmovie__ext-ratings {display: flex;}</style>
+<?endif?>
+</body>
+</html>

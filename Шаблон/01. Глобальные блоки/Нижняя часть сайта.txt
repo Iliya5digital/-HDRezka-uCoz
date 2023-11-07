@@ -1,0 +1,7 @@
+<div class="footer__text flex-grow-1">
+© 2023 "$SITE_NAME$" Смотрите новые сериалы и фильмы онлайн.
+<br>Все права защищены, берегитесь пиратов.
+</div>
+
+<a href="/index/0-3" class="footer__btn btn">Правообладателям</a>
+<div class="footer__counter pand_foot">$POWERED_BY$</div>
