@@ -1,0 +1,112 @@
+Информер #1
+[ Каталог файлов · Материалы · Дата добавления материала D · Материалы: 16 · Колонки: 1 ]	
+
+Шаблон информера:
+<div class="bslide img-responsive img-fit-cover img-mask">
+<div class="bslide__desc">
+<h2 class="bslide__title ws-nowrap">$TITLE$</h2>
+
+<div class="bslide__rating poster__rating"><div class="js-count-rating d-none">$RATED$$RATING_NUM$</div></div>
+<p class="bslide__text line-clamp"><?if(len($MESSAGE$)>250)?><?substr($MESSAGE$,0,247)?>.....<?else?>$MESSAGE$<?endif?></p>
+
+<div class="bslide__btns d-flex icon-at-right">
+<a href="$ENTRY_URL$" class="bslide__btn-watch btn">Смотреть онлайн <span class="fal fa-long-arrow-right"></span></a>
+<?if($SOURCE_URL$)?><button class="bslide__btn-trailer js-show-trailer" data-trl="$SOURCE_URL$">Трейлер</button><?endif?>
+</div>
+
+</div>
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$">
+</div>
+
+-----------------------------------------------------------------------------------------
+
+Информер #2
+[ Каталог файлов · Материалы · Дата добавления материала D · Материалы: 5 · Колонки: 1 · Определенные категории ]	
+
+Шаблон информера:
+<a class="popular d-flex ai-center" href="$ENTRY_URL$">
+<div class="popular__img img-fit-cover"><img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$"></div>
+<div class="popular__desc flex-grow-1">
+<div class="popular__title line-clamp">$TITLE$</div>
+<?if($CATEGORY_NAME$)?><ul class="poster__subtitle"><li class="ws-nowrap">$CATEGORY_NAME$</li></ul><?endif?>
+</div>
+</a>
+
+-----------------------------------------------------------------------------------------
+
+Информер #3
+[ Комментарии · Каталог файлов · Дата добавления материала D · Материалы: 6 · Колонки: 1 ]	
+
+Шаблон информера:
+<div class="lcomm js-comm">
+<div class="lcomm__meta d-flex ai-center">
+<div class="lcomm__av img-fit-cover js-comm-avatar"><img src="<?if($USER_AVATAR_URL$)?>$USER_AVATAR_URL$<?else?>/dleimages/noavatar.png<?endif?>" loading="lazy" alt="<?if($USERNAME$)?>$USERNAME$<?else?>$NAME$<?endif?>"></div>
+<div class="lcomm__author flex-grow-1 ws-nowrap js-comm-author"><?if($USERNAME$)?>$USERNAME$<?else?>$NAME$<?endif?></div>
+<div class="lcomm__date">$DATE$</div>
+</div>
+
+<div class="lcomm__text"><?if(len($MESSAGE$)>80)?><?substr($MESSAGE$,0,77)?>.....<?else?>$MESSAGE$<?endif?></div>
+<a class="lcomm__link ws-nowrap icon-at-left" href="$ENTRY_URL$"><span class="fal fa-arrow-circle-right"></span>$ENTRY_TITLE$</a>
+</div>
+
+-----------------------------------------------------------------------------------------
+
+Информер #4
+[ Каталог файлов · Материалы · Дата добавления материала D · Материалы: 15 · Колонки: 1 · Определенные категории ]	
+
+Шаблон информера:
+<a href="$ENTRY_URL$" class="updli d-flex ai-center">
+<div class="updli-2 flex-grow-1"><div class="line-clamp">$TITLE$</div> <?if($OTHER7$)?>($OTHER7$)<?endif?></div>
+<?if($AUTHOR_SITE$ or $OTHER5$)?><div class="updli-3"><?if($AUTHOR_SITE$)?><div>$AUTHOR_SITE$</div><?endif?> <?if($OTHER5$)?>($OTHER5$)<?endif?></div><?endif?>
+</a>
+
+-----------------------------------------------------------------------------------------
+
+Информер #5
+[ Каталог файлов · Материалы · Дата добавления материала D · Материалы: 3 · Колонки: 1 · Определенные категории ]	
+
+Шаблон информера:
+<a class="coll img-responsive img-fit-cover img-mask" href="$ENTRY_URL$">
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$">
+<div class="coll__title d-flex jc-center fd-column">$TITLE$</div>
+<div class="has-overlay__icon anim pi-center"><div class="fal fa-book pi-center"></div></div>
+</a>
+
+-----------------------------------------------------------------------------------------
+
+Информер #6
+[ Каталог файлов · · В случайном порядке · Материалы: 6 · Колонки: 1 ]	
+
+Шаблон информера:
+<a class="poster grid-item d-flex fd-column has-overlay" href="$ENTRY_URL$">
+<div class="poster__img img-responsive img-responsive--portrait img-fit-cover anim">
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$">
+<?if($SOURCE_URL$)?><div class="poster__trailer js-show-trailer" data-trl="$SOURCE_URL$"><div class="fal fa-play pi-center"></div><span>Трейлер</span></div><?endif?>
+<div class="poster__btn-info anim pi-center js-show-info"><div class="fal fa-info-circle"></div></div>
+<div class="has-overlay__icon anim pi-center"><div class="fal fa-play pi-center"></div></div>
+</div>
+
+<div class="poster__desc">
+<h3 class="poster__title ws-nowrap">$TITLE$</h3>
+<div class="poster__subtitle d-flex ai-center"><div class="poster__meta flex-grow-1 ws-nowrap"><?if($FILTER2_VALUE$)?>$FILTER2_VALUE$,<?endif?><?if($AUTHOR_NAME$)?> $AUTHOR_NAME$<?endif?></div></div>
+</div>
+</a>
+
+-----------------------------------------------------------------------------------------
+
+Информер #7
+[ Каталог файлов · · В случайном порядке · Материалы: 16 · Колонки: 1 ]
+
+Шаблон информера:
+<a class="top d-flex fd-column has-overlay" href="">
+<div class="top__img img-fit-cover img-responsive img-responsive--portrait img-mask">
+<img src="<?if($SCREEN_URL$)?>$SCREEN_URL$<?else?>$IMG_URL1$<?endif?>" loading="lazy" alt="$TITLE$">
+<div class="top__desc"><div class="top__title line-clamp">$TITLE$</div></div>
+</div>
+</a>
+
+-----------------------------------------------------------------------------------------
+
+Информер 2 - Определенные категории - Список ID категорий - 29
+Информер 4 - Определенные категории - Список ID категорий - 23
+Информер 5 - Определенные категории - Список ID категорий - 30
